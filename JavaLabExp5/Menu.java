@@ -3,10 +3,7 @@ import java.util.Scanner;
 // Menu-driven program for calculating area, perimeter, and volume of different shapes.
 
 public class Menu {
-    public static void main(String[] args) {
-        // Display student details
-        System.out.println("Name: [Your Name] | PRN: [Your PRN] | Batch: [Your Batch]");
-        
+    public static void main(String[] args) {        
         Scanner sc = new Scanner(System.in); // Scanner for user input
         
         while (true) {
