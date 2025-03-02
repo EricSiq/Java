@@ -4,10 +4,6 @@ import java.util.Scanner;
  * Duck Simulation Program
  * Allows the user to select a duck and observe its behaviors.
  * Behaviors include flying, quacking, and swimming.
- * 
- * Name: [Your Name]
- * PRN: [Your PRN]
- * Batch: [Your Batch]
  */
 public class Main {
     public static void main(String[] args) {
