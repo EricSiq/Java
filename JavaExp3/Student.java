@@ -1,7 +1,5 @@
 // Student.java
-// Class representing a Student
-
-import java.util.Date;
+// Class representing a Student with input validation
 
 public class Student {
     private String prn;
@@ -9,26 +7,48 @@ public class Student {
     private String dob;
     private double marks;
 
-    // Constructor
+    // Constructor with validation
     public Student(String prn, String name, String dob, double marks) {
-        this.prn = prn;
-        this.name = name;
+        setPrn(prn);
+        setName(name);
         this.dob = dob;
-        this.marks = marks;
+        setMarks(marks);
     }
 
-    // Getters and Setters
+    // Getters and Setters with validation
     public String getPrn() { return prn; }
-    public void setPrn(String prn) { this.prn = prn; }
+
+    public void setPrn(String prn) {
+        if (prn.matches("\\d{11}")) {  // Ensures PRN is exactly 11 digits
+            this.prn = prn;
+        } else {
+            throw new IllegalArgumentException("Invalid PRN: Must be exactly 11 digits.");
+        }
+    }
 
     public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+
+    public void setName(String name) {
+        if (name.matches("[A-Za-z ]+")) {  // Ensures name contains only letters and spaces
+            this.name = name;
+        } else {
+            throw new IllegalArgumentException("Invalid Name: Must contain only letters and spaces.");
+        }
+    }
 
     public String getDob() { return dob; }
+
     public void setDob(String dob) { this.dob = dob; }
 
     public double getMarks() { return marks; }
-    public void setMarks(double marks) { this.marks = marks; }
+
+    public void setMarks(double marks) {
+        if (marks >= 0 && marks <= 99) {  // Ensures marks are within valid range (0-99)
+            this.marks = marks;
+        } else {
+            throw new IllegalArgumentException("Invalid Marks: Must be between 0 and 99.");
+        }
+    }
 
     // Display student details
     public void display() {
