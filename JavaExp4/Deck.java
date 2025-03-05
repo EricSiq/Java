@@ -31,13 +31,13 @@ public class Deck {
     }
 
     // Find a specific card in the deck
-    public boolean findCard(String rank, String suit) {
+    public Card findCard(String rank, String suit) {
         for (Card card : deck) {
             if (card.getRank().equalsIgnoreCase(rank) && card.getSuit().equalsIgnoreCase(suit)) {
-                return true;
+                return card;
             }
         }
-        return false;
+        return null;
     }
 
     // Deal 5 random cards
