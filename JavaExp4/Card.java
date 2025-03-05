@@ -8,26 +8,20 @@ public class Card {
         this.suit = suit;
         this.rank = rank;
     }
-
-    // Getter methods
     public String getSuit() {
         return suit;
     }
-
     public String getRank() {
         return rank;
     }
-
     // Print the card
     public void printCard() {
         System.out.println(rank + " of " + suit);
     }
-
     // Check if another card has the same suit
     public boolean sameCard(Card other) {
         return this.suit.equals(other.suit);
     }
-
     // Check if another card has the same rank
     public boolean compareCard(Card other) {
         return this.rank.equals(other.rank);
