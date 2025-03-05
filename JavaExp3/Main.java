@@ -1,5 +1,7 @@
 // Main.java
-
+//Eric Siqueira
+//PRN : 23070126041
+// AIML A2
 import java.util.Scanner;
 
 public class Main {
