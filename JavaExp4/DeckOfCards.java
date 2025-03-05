@@ -1,3 +1,6 @@
+//Eric Siqueira
+//PRN : 23070126041
+// AIML A2
 import java.util.Scanner;
 
 // DeckOfCards.java - A menu-driven program to manage a deck of playing cards.
