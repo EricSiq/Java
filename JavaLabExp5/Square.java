@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 // Square class extends Shape
-class Square extends Shape {
+public class Square extends Shape {
     private final double side;
 
     // Constructor

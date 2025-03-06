@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 // Sphere class extends Shape and implements Volume
-class Sphere extends Shape implements Volume {
+public class Sphere extends Shape implements Volume {
     private final double radius;
 
     // Constructor
@@ -13,12 +13,14 @@ class Sphere extends Shape implements Volume {
     // Override abstract methods
     @Override
     public double calculateArea() {
-        return 4 * Math.PI * radius * radius;
+        // Projected area (area of great circle)
+        return Math.PI * radius * radius;
     }
 
     @Override
     public double calculatePerimeter() {
-        return 0; // Not applicable for a sphere
+        // Total surface area of sphere
+        return 4 * Math.PI * radius * radius;
     }
 
     @Override

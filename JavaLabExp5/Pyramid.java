@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 // For an equilateral pyramid (all edges equal), if the base side is 's',
-class Pyramid extends Shape implements Volume {
+public class Pyramid extends Shape implements Volume {
     private final double side;
     private final double height; // Computed based on equilateral property
 

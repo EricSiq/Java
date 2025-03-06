@@ -1,9 +1,10 @@
 import java.util.Scanner;
 
 // Rectangle class extends Shape
-class Rectangle extends Shape {
-    private final  double length, width;
-
+public class Rectangle extends Shape {
+    private final double length;
+    private final double width;
+    
     // Constructor
     public Rectangle(double length, double width) {
         super("Rectangle");
@@ -25,7 +26,7 @@ class Rectangle extends Shape {
     // Static method to create a Rectangle from user input
     public static Rectangle createFromUserInput() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter length of the rectangle: ");
+        System.out.print("Enter the length of the rectangle: ");
         double length = sc.nextDouble();
         System.out.print("Enter width of the rectangle: ");
         double width = sc.nextDouble();

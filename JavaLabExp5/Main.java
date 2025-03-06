@@ -1,9 +1,7 @@
 import java.util.Scanner;
-// Eric Siqueira
-// AIML A2
-// PRN: 23070126041
+
 // Menu-driven program for calculating area, perimeter, and volume of different shapes.
-public class Main {
+public class Main { 
     public static void main(String[] args) {        
         Scanner sc = new Scanner(System.in); // Scanner for user input
         
@@ -59,7 +57,7 @@ public class Main {
             if (shape != null) {
                 System.out.println("\n--- Calculations ---");
                 System.out.println("Area: " + shape.calculateArea());
-                System.out.println("Perimeter: " + shape.calculatePerimeter());
+                System.out.println("Perimeter/Surface Area: " + shape.calculatePerimeter());
             }
             
             // Display volume if a 3D shape (implements Volume) is selected

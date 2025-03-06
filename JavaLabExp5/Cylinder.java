@@ -1,14 +1,10 @@
 import java.util.Scanner;
 
-interface Volume {
-    double calculateVolume();
-}
-
 // Cylinder class extends Shape and implements Volume
-class Cylinder extends Shape implements Volume {
+public class Cylinder extends Shape implements Volume {
     private final double radius;
     private final double height;
-
+    
     // Constructor
     public Cylinder(double radius, double height) {
         super("Cylinder");
