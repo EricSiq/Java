@@ -1,0 +1,43 @@
+Menu Driven Shape Calculator
+This project is a Java-based menu-driven application designed to calculate the area, perimeter, and volume of various 2D and 3D shapes. It demonstrates the use of object-oriented programming concepts such as inheritance, abstract classes, interfaces, and encapsulation.
+
+Features
+2D Shapes:
+
+Circle: Calculates area and perimeter.
+Rectangle: Calculates area and perimeter.
+Square: Calculates area and perimeter.
+3D Shapes:
+
+Sphere: Calculates surface area and volume.
+Cylinder: Calculates surface area, base perimeter, and volume.
+Equilateral Pyramid (Square Base): Calculates surface area (base + lateral area), base perimeter, and volume.
+Project Structure
+The project is organized into multiple Java files, each responsible for a specific class or interface:
+
+Shape.java:
+An abstract class that defines common properties and methods (including a non-abstract constructor) for all shapes. It declares abstract methods for calculating area and perimeter.
+
+Volume.java:
+An interface for 3D shapes that declares the calculateVolume() method.
+
+Circle.java:
+Extends Shape and implements the calculations for a circle.
+
+Rectangle.java:
+Extends Shape and implements the calculations for a rectangle.
+
+Square.java:
+Extends Shape and implements the calculations for a square.
+
+Sphere.java:
+Extends Shape and implements Volume to provide calculations for a sphere.
+
+Cylinder.java:
+Extends Shape and implements Volume to provide calculations for a cylinder.
+
+EquilateralPyramid.java:
+Extends Shape and implements Volume to provide calculations for an equilateral pyramid (square base).
+
+Menu.java:
+Contains the main method. It presents a menu to the user to select a shape, gathers the necessary measurements via user input, and then displays the computed area, perimeter, and volume (if applicable).
