@@ -1,0 +1,33 @@
+# Duck Simulation Project
+
+## Overview
+This project implements a **Duck Simulation** using the Strategy Design Pattern. Each duck can have different **fly, quack, and swim behaviors**, which are dynamically assigned using composition rather than inheritance.
+
+The **DecoyDuck** class represents a duck that:
+- **Cannot fly** (`NoFly` behavior)
+- **Cannot quack** (`MuteQuack` behavior)
+- **Drowns instead of swimming** (`Swim(Swim.SwimType.DROWN)` behavior)
+
+## Features
+- Uses **Strategy Pattern** to allow dynamic behavior assignment.
+- Implements **FlyBehavior, QuackBehavior, and SwimBehavior** interfaces.
+- Supports different types of ducks with varying abilities.
+
+## Class Structure
+### 1. `Duck.java`
+Abstract base class defining common properties and enforcing behavior contracts.
+
+### 2. `DecoyDuck.java`
+A specific type of duck that:
+- Uses `NoFly` behavior.
+- Uses `MuteQuack` behavior.
+- Uses `Swim(Swim.SwimType.DROWN)` behavior.
+
+### 3. `Swim.java`
+Implements the `SwimBehavior` interface, allowing ducks to have different swimming styles (`SWIM`, `FLOAT`, `DROWN`).
+
+### 4. `NoFly.java`
+Implements `FlyBehavior`, making the duck unable to fly.
+
+### 5. `MuteQuack.java`
+Implements `QuackBehavior`, making the duck silent.

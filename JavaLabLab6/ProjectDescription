@@ -1,5 +1,0 @@
-- Main.java (Main class with menu)
-- Duck.java (Abstract Base Class)
-- FlyBehavior.java, Fly.java, NotFly.java (Fly behaviors)
-- SwimBehavior.java, Swim.java, Float.java, Drown.java (Swim behaviors)
-- MallardDuck.java, RedheadDuck.java, RubberDuck.java, DecoyDuck.java (Duck Types)
