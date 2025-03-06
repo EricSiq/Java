@@ -1,5 +1,10 @@
 import java.util.Scanner;
-
+/**
+Menu Driven Program to analyse properties of DUcks of different types:
+Eric Siqueira
+AIML A2
+PRN: 23070126041
+**/
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
