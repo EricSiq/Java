@@ -1,61 +1,47 @@
 import java.util.Scanner;
 
-/**
- * Duck Simulation Program
- * Allows the user to select a duck and observe its behaviors.
- * Behaviors include flying, quacking, and swimming.
- Eric Siqueira
-PRN: 23070126041
- AIML A2
- */
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);  // Scanner object to take user input
+        Scanner sc = new Scanner(System.in);
 
         while (true) {
-            // Display the menu options for selecting a duck type
             System.out.println("\n--- Duck Simulation ---");
-            System.out.println("1. Mallard Duck");   // Flies, Quacks, Swims
-            System.out.println("2. Redhead Duck");   // Flies, Quacks, Swims
-            System.out.println("3. Rubber Duck");    // Cannot Fly, Squeaks, Floats
-            System.out.println("4. Decoy Duck");     // Cannot Fly, No Quack, Drowns
-            System.out.println("5. Exit");          // Exit the program
+            System.out.println("1. Mallard Duck");
+            System.out.println("2. Redhead Duck");
+            System.out.println("3. Rubber Duck");
+            System.out.println("4. Decoy Duck");
+            System.out.println("5. Exit");
             System.out.print("Enter choice: ");
 
-            int choice = sc.nextInt();  // Read user input
-            Duck duck = null;           // Declare a Duck reference
+            int choice = sc.nextInt();
+            Duck duck = null;
 
-            // Select a duck based on user choice
             switch (choice) {
                 case 1:
-                    duck = new MallardDuck();  // Create a MallardDuck object
+                    duck = new MallardDuck();
                     break;
                 case 2:
-                    duck = new RedheadDuck();  // Create a RedheadDuck object
+                    duck = new RedheadDuck();
                     break;
                 case 3:
-                    duck = new RubberDuck();   // Create a RubberDuck object
+                    duck = new RubberDuck();
                     break;
                 case 4:
-                    duck = new DecoyDuck();    // Create a DecoyDuck object
+                    duck = new DecoyDuck();
                     break;
                 case 5:
-                    // Exit condition: Close scanner and terminate the program
                     System.out.println("Exiting...");
                     sc.close();
                     System.exit(0);
                 default:
-                    // Handle invalid input
                     System.out.println("Invalid choice! Try again.");
             }
 
-            // If a valid duck is selected, perform its behaviors
             if (duck != null) {
-                System.out.println("\n--- Duck Information ---");
-                duck.display();       // Display duck type
-                duck.performFly();    // Perform flying behavior
-                duck.performQuack();  // Perform quacking behavior
-                duck.performSwim();   // Perform swimming behavior
+                duck.display();
+                duck.performFly();
+                duck.performQuack();
+                duck.performSwim();
             }
         }
     }
