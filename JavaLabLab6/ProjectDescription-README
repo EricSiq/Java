@@ -1,33 +1,28 @@
-# Duck Simulation Project
+# Duck Simulation System 🦆  
 
-## Overview
-This project implements a **Duck Simulation** using the Strategy Design Pattern. Each duck can have different **fly, quack, and swim behaviors**, which are dynamically assigned using composition rather than inheritance.
+## Overview  
+This project implements a **Duck Simulation System** using the **Strategy Design Pattern**. It allows different types of ducks to have unique behaviors for **flying, quacking, and swimming**, which can be dynamically assigned and changed at runtime.  
 
-The **DecoyDuck** class represents a duck that:
-- **Cannot fly** (`NoFly` behavior)
-- **Cannot quack** (`MuteQuack` behavior)
-- **Drowns instead of swimming** (`Swim(Swim.SwimType.DROWN)` behavior)
+## Features  
+- **Encapsulation of Behaviors**: Ducks have separate behavior classes for flying, quacking, and swimming.  
+- **Flexible & Extensible**: New duck types or behaviors can be easily added.  
+- **Realistic Simulation**: Different ducks exhibit different behaviors.  
 
-## Features
-- Uses **Strategy Pattern** to allow dynamic behavior assignment.
-- Implements **FlyBehavior, QuackBehavior, and SwimBehavior** interfaces.
-- Supports different types of ducks with varying abilities.
+## Class Structure  
 
-## Class Structure
-### 1. `Duck.java`
-Abstract base class defining common properties and enforcing behavior contracts.
+### `Duck` (Abstract Class)  
+- Defines a blueprint for all ducks.  
+- Holds references to `FlyBehavior`, `QuackBehavior`, and `SwimBehavior`.  
 
-### 2. `DecoyDuck.java`
-A specific type of duck that:
-- Uses `NoFly` behavior.
-- Uses `MuteQuack` behavior.
-- Uses `Swim(Swim.SwimType.DROWN)` behavior.
+### `DecoyDuck` (Concrete Class)  
+- A type of duck that **does not fly, does not quack, and drowns**.  
+- Uses `NoFly`, `MuteQuack`, and `Swim(Swim.SwimType.DROWN)`.  
 
-### 3. `Swim.java`
-Implements the `SwimBehavior` interface, allowing ducks to have different swimming styles (`SWIM`, `FLOAT`, `DROWN`).
+### `FlyBehavior` (Interface)  
+- Implemented by `FlyWithWings` and `NoFly`.  
 
-### 4. `NoFly.java`
-Implements `FlyBehavior`, making the duck unable to fly.
+### `QuackBehavior` (Interface)  
+- Implemented by `Quack` and `MuteQuack`.  
 
-### 5. `MuteQuack.java`
-Implements `QuackBehavior`, making the duck silent.
+### `SwimBehavior` (Interface)  
+- Implemented by `Swim`, which uses an enum (`SWIM, FLOAT, DROWN`).  
