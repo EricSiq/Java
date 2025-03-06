@@ -12,9 +12,6 @@ public class DecoyDuck extends Duck {
               new Swim(Swim.SwimType.DROWN)); // Drowns instead of swimming
     }
 
-    /**
-     * Override display method to specify the appearance of DecoyDuck.
-     */
     @Override
     public void display() {
         System.out.println("Looks like a wooden decoy duck.");
