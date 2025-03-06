@@ -36,7 +36,7 @@ Extends Shape and implements Volume to provide calculations for a sphere.
 Cylinder.java:
 Extends Shape and implements Volume to provide calculations for a cylinder.
 
-EquilateralPyramid.java:
+Pyramid.java:
 Extends Shape and implements Volume to provide calculations for an equilateral pyramid (square base).
 
 Menu.java:
