@@ -1,13 +1,16 @@
-
+// Implements swimming behavior for ducks
 public class Swim implements SwimBehavior {
-    private final String type; // Stores  type of swimming behavior
+    // Defines possible swimming behaviors
+    public enum SwimType { SWIM, FLOAT, DROWN }
+
+    private final SwimType swimType;
 
     /**
-     * Constructor to initialize the swimming behavior of a duck.
-     * @param type The type of swimming behavior (e.g., "swim", "float", "drown").
+     * Constructor to initialize swimming behavior using SwimType enum.
+     * @param swimType The type of swimming behavior (SWIM, FLOAT, DROWN).
      */
-    public Swim(String type) {
-        this.type = type.toLowerCase(); // Convert input to lowercase for consistency
+    public Swim(SwimType swimType) {
+        this.swimType = swimType;
     }
 
     /**
@@ -15,11 +18,10 @@ public class Swim implements SwimBehavior {
      */
     @Override
     public void swim() {
-        switch (type) {
-            case "swim" -> System.out.println("This duck is swimming gracefully.");
-            case "float" -> System.out.println("This duck is floating on the water.");
-            case "drown" -> System.out.println("This duck is struggling and drowning.");
-            default -> System.out.println("Unknown swimming behavior. Please check input.");
+        switch (swimType) {
+            case SWIM -> System.out.println("This duck is swimming gracefully.");
+            case FLOAT -> System.out.println("This duck is floating on the water.");
+            case DROWN -> System.out.println("This duck is struggling and drowning.");
         }
     }
 }
