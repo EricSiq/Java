@@ -1,7 +1,7 @@
 /*
-Name: John Doe
-PRN: 123456789
-Batch: 2025 Batch
+Name: Eric Siqueira
+PRN: 23070126041
+Batch: 2023-27 Batch
 */
 
 import java.util.Scanner;
