@@ -1,8 +1,7 @@
-// Student.java
 // Represents a student with ID, name, and age.
 
 public class Student {
-    private int id;
+    private final int id;
     private String name;
     private int age;
 
