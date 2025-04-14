@@ -1,11 +1,10 @@
-// StudentManager.java
 // Manages student records: add, delete, search, and display.
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class StudentManager {
-    private List<Student> students = new ArrayList<>();
+    final private List<Student> students = new ArrayList<>();
 
     // Adds a new student to the list
     public void addStudent(Student student) throws DuplicateStudentException {
