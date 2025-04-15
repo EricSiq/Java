@@ -16,6 +16,4 @@ General Exception: Catches any other exceptions to ensure robust error handling.
 Coding Guidelines:
 The code follows standard Java naming conventions, includes comments for each block of logic, and clearly separates operations into different functions (each in its own file).
 
-To run the application, compile all the Java files together and run the CalculatorMain class. This approach makes your program scalable and easy to maintain.
-
-Feel free to adjust the file names, class names, or exception messages according to any additional coding guidelines you may follow in your organization or class.
+To run the application, compile all the Java files together and run the CalculatorMain class. 
